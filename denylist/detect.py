@@ -1,6 +1,8 @@
+import os
+import sys
 from nltk.tokenize import word_tokenize
 
-with open("data.txt") as f:
+with open(os.path.join(os.path.dirname(__file__), 'data.txt')) as f:
     denylist = f.readlines()
 
 denylist = [x.strip() for x in denylist]
